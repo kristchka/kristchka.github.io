@@ -3,199 +3,253 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Кристина Кондратьева — Project / Product Manager</title>
-<meta name="description" content="Project / Product Manager: ИИ‑продукты и автоматизация. Кейсы Operiva, Площадь цветов, Dmebel.">
-<meta property="og:title" content="Кристина Кондратьева — Project / Product Manager">
-<meta property="og:description" content="ИИ‑продукты и автоматизация. 25% конверсия бота, ТЗ за 3 дня вместо 2 недель, пилот ИИ-системы в отеле.">
+<title>Кристина Кондратьева, Project / Product Manager</title>
+<meta name="description" content="Project / Product Manager: ИИ-продукты и автоматизация. Кейсы Operiva, Площадь цветов, Dmebel.">
+<meta property="og:title" content="Кристина Кондратьева, Project / Product Manager">
+<meta property="og:description" content="ИИ-продукты и автоматизация. Бот с конверсией 25%, ТЗ за 3 дня вместо 2 недель, пилот ИИ-системы в отеле.">
 <meta property="og:image" content="https://kristchka.github.io/img/photo.jpg">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap">
 <style>
-a{color:#1F6F4A}a:hover{color:#15513A}
-</style>
-<style>
+:root{
+  --bg:#FAF8F5; --paper:#FFFFFF; --ink:#1D1D1B; --soft:#55534E; --mute:#8A877F;
+  --line:#E7E3DC; --accent:#2F6B4F; --accent-bg:#EAF2EC; --mark:#FFE9A8;
+}
+*{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#F3F5F2}
-img{max-width:100%}
-article>div[style*="auto-fit"]>img{grid-column:1/-1}
-a:focus-visible{outline:3px solid #1F6F4A;outline-offset:3px;border-radius:6px}
-@media (max-width:760px){
- aside{max-width:none!important}
- [style*="repeat(4, minmax(0, 1fr))"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
- [style*="minmax(0, 1fr) 20px minmax(0, 1fr)"]{grid-template-columns:1fr!important;gap:2px!important}
- [style*="minmax(0, 1fr) 20px minmax(0, 1fr)"]>span{display:none}
- [style*="minmax(0, 1fr) 20px minmax(0, 1fr)"]>p:last-child::before{content:"→ "}
- [style*="padding: 48px 32px 72px"]{padding:24px 16px 48px!important}
- [style*="padding: 28px; display: flex; flex-direction: column; gap: 20px"]{padding:20px!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Onest,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+img{max-width:100%;display:block}
+h1,h2,h3,p,ul{margin:0}
+b,strong{font-weight:600}
+
+.page{max-width:1180px;margin:0 auto;padding:56px 32px 80px;display:grid;grid-template-columns:300px minmax(0,1fr);gap:56px;align-items:start}
+
+/* профиль */
+.profile{position:sticky;top:32px;display:grid;gap:22px}
+.photo{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;background:#fff}
+.profile h1{font-size:28px;font-weight:700;line-height:1.15;letter-spacing:-.01em}
+.role{color:var(--soft);margin-top:6px}
+.status{display:inline-flex;gap:8px;align-items:center;font-size:15px;color:var(--accent);font-weight:500}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:#3C9A6A}
+.facts{display:grid;gap:6px;font-size:15px;color:var(--soft)}
+.facts b{color:var(--ink);font-weight:500}
+.cta{display:block;text-align:center;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:13px 16px;border-radius:10px}
+.cta:hover{background:#255840}
+.small-h{font-size:15px;font-weight:600;margin-bottom:6px}
+.tools{font-size:15px;color:var(--soft);line-height:1.7}
+.links{display:grid;gap:4px;font-size:15px}
+
+/* основная колонка */
+main{display:grid;gap:64px;min-width:0}
+.intro p{font-size:22px;line-height:1.5;max-width:30em}
+.intro p+p{margin-top:16px;font-size:18px;color:var(--soft)}
+.numbers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:32px}
+.numbers div{padding:20px 20px 20px 0}
+.numbers div+div{padding-left:20px;border-left:1px solid var(--line)}
+.numbers strong{display:block;white-space:nowrap;font-size:30px;font-weight:700;line-height:1.1;letter-spacing:-.02em}
+.numbers span{font-size:14px;color:var(--soft)}
+
+.section-title{font-size:30px;font-weight:700;letter-spacing:-.01em;margin-bottom:8px}
+
+.case{display:grid;gap:22px;padding-top:40px;border-top:1px solid var(--line)}
+.case:first-of-type{border-top:0;padding-top:8px}
+.case-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 20px;align-items:baseline}
+.case h3{font-size:24px;font-weight:700;letter-spacing:-.01em}
+.when{color:var(--mute);font-size:15px}
+.lead{color:var(--soft);max-width:40em}
+.case h4{font-size:18px;font-weight:600;margin:0 0 8px}
+.case ul{padding-left:20px;display:grid;gap:8px;max-width:44em}
+.case li::marker{color:var(--mute)}
+.done li b{font-weight:600}
+.done li span{color:var(--soft)}
+.result{font-size:19px;font-weight:500;max-width:40em}
+.result mark{background:linear-gradient(transparent 55%,var(--mark) 55%);color:inherit;padding:0 2px}
+.shots{display:grid;gap:14px}
+.shots.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.shots.three{grid-template-columns:1fr 1fr 2fr;align-items:end}
+.shots img{width:100%;border-radius:10px;border:1px solid var(--line);background:#fff}
+.note{font-size:14px;color:var(--mute)}
+
+.sales{display:grid;gap:14px}
+.sales p{max-width:42em}
+
+.closing{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:32px;display:grid;gap:12px}
+.closing h2{font-size:26px;font-weight:700}
+.closing p{color:var(--soft);max-width:36em}
+
+@media (max-width:900px){
+  .page{grid-template-columns:minmax(0,1fr);gap:40px;padding:28px 16px 56px}
+  .profile{position:static;grid-template-columns:140px minmax(0,1fr);align-items:start}
+  .profile>*{grid-column:1/-1}
+  .profile .photo{grid-column:1;grid-row:1 / span 3}
+  .profile .namebox,.profile .status,.profile .facts{grid-column:2}
+  .numbers{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .numbers div:nth-child(3){padding-left:0;border-left:0}
+  .numbers div:nth-child(n+3){border-top:1px solid var(--line)}
+  .intro p{font-size:19px}
+  .shots.three{grid-template-columns:1fr 1fr}
+  .shots.three img:last-child{grid-column:1/-1}
+}
+@media (max-width:480px){
+  .profile{grid-template-columns:110px minmax(0,1fr)}
+  .facts{font-size:14px}
 }
 </style>
 </head>
 <body>
-<div style="background: #F3F5F2; color: #1B1F1D; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 17px; line-height: 1.55">
-  <div style="max-width: 1240px; margin: 0 auto; padding: 48px 32px 72px; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start">
+<div class="page">
 
-    <aside style="flex: 1 1 320px; max-width: 380px; background: #FFFFFF; border: 1px solid #DDE3DE; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 20px">
-      <img src="img/photo.jpg" alt="Кристина Кондратьева" style="width: 100%; max-width: 240px; aspect-ratio: 4 / 5; height: auto; border-radius: 16px; object-fit: cover; background: #FFFFFF; border: 1px solid #DDE3DE">
-      <div style="display: flex; flex-direction: column; gap: 4px">
-        <h1 style="margin: 0; font-size: 30px; font-weight: 700; line-height: 1.15">Кристина Кондратьева</h1>
-        <p style="margin: 0; font-size: 18px; color: #3E4742">Project / Product Manager · ИИ‑продукты и автоматизация</p>
-      </div>
-      <p style="margin: 0; display: inline-flex; align-self: flex-start; gap: 8px; align-items: center; background: #E1F1E8; color: #175A3B; font-weight: 600; font-size: 14px; padding: 6px 12px; border-radius: 999px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #1F8A55"></span>Ищу работу</p>
-      <div style="display: grid; grid-template-columns: 96px 1fr; gap: 8px 12px; font-size: 15px; border-top: 1px solid #E6EAE7; padding-top: 18px">
-        <p style="margin: 0; color: #5B665F">Город</p><p style="margin: 0">Москва</p>
-        <p style="margin: 0; color: #5B665F">Формат</p><p style="margin: 0">удалённо или гибрид</p>
-        <p style="margin: 0; color: #5B665F">Telegram</p><a href="https://t.me/Krist_chka" target="_blank" rel="noopener" style="font-weight: 600">@Krist_chka</a>
-        <p style="margin: 0; color: #5B665F">Почта</p><p style="margin: 0">kondr2856@yandex.ru</p>
-        <p style="margin: 0; color: #5B665F">Телефон</p><p style="margin: 0">+7 977 267-73-63</p>
-      </div>
-      <a href="https://t.me/Krist_chka" target="_blank" rel="noopener" style="background: #1F6F4A; color: #FFFFFF; text-decoration: none; font-weight: 600; text-align: center; padding: 14px 18px; border-radius: 12px">Пригласить на собеседование</a>
-      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid #E6EAE7; padding-top: 18px">
-        <p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5B665F">Инструменты</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 6px; font-size: 14px">
-          <span style="background: #F0F3F1; border-radius: 8px; padding: 4px 10px">Jira</span><span style="background: #F0F3F1; border-radius: 8px; padding: 4px 10px">Trello</span><span style="background: #F0F3F1; border-radius: 8px; padding: 4px 10px">Битрикс24</span><span style="background: #F0F3F1; border-radius: 8px; padding: 4px 10px">Figma</span><span style="background: #F0F3F1; border-radius: 8px; padding: 4px 10px">Google Sheets</span><span style="background: #F0F3F1; border-radius: 8px; padding: 4px 10px">Excel</span><span style="background: #F0F3F1; border-radius: 8px; padding: 4px 10px">Telegram Bot API</span><span style="background: #F0F3F1; border-radius: 8px; padding: 4px 10px">ChatGPT</span><span style="background: #F0F3F1; border-radius: 8px; padding: 4px 10px">Claude</span>
-        </div>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 8px; border-top: 1px solid #E6EAE7; padding-top: 18px; font-size: 15px">
-        <p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5B665F">Проекты по ссылкам</p>
-        <a href="https://operiva.tech/" target="_blank" rel="noopener">operiva.tech</a>
-        <a href="https://ploshad-cvetov.ru/" target="_blank" rel="noopener">ploshad-cvetov.ru</a>
-        <a href="https://t.me/FlowersKievskaya_bot" target="_blank" rel="noopener">@FlowersKievskaya_bot</a>
-        <a href="https://denzelmebel.ru/" target="_blank" rel="noopener">denzelmebel.ru</a>
-      </div>
-    </aside>
-
-    <main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
-      <section style="background: #1B1F1D; color: #F3F5F2; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
-        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #9FD3B6">Коротко, за 30 секунд</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 16px">
-          <div style="display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 40px; font-weight: 700; color: #9FD3B6">25%</p><p style="margin: 0; font-size: 15px; color: #C9D1CC">конверсия в заявку у моего бота</p></div>
-          <div style="display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 40px; font-weight: 700; color: #9FD3B6">3 дня</p><p style="margin: 0; font-size: 15px; color: #C9D1CC">на ТЗ вместо 2 недель</p></div>
-          <div style="display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 40px; font-weight: 700; color: #9FD3B6">17</p><p style="margin: 0; font-size: 15px; color: #C9D1CC">менеджеров в моём отделе</p></div>
-          <div style="display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 40px; font-weight: 700; color: #9FD3B6">2,5 млн ₽</p><p style="margin: 0; font-size: 15px; color: #C9D1CC">госконтракт, в закрытии которого участвовала</p></div>
-        </div>
-      </section>
-
-      <section style="display: flex; flex-direction: column; gap: 18px">
-        <h2 style="margin: 0; font-size: 28px; font-weight: 700">Опыт и проекты</h2>
-
-        <!-- OPERIVA -->
-        <article style="background: #FFFFFF; border: 1px solid #DDE3DE; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 20px">
-          <div style="display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; justify-content: space-between">
-            <h3 style="margin: 0; font-size: 23px; font-weight: 700">Operiva · Co-Founder / Product Manager</h3>
-            <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #5B665F">05.2026 — 10.2026</p>
-          </div>
-          <p style="margin: 0; color: #3E4742">Веб-приложение с ИИ-ассистентами для собственников и управляющих отелей. Снимает с администратора поток рутины: переписку в трёх каналах, устные поручения, ночные запросы.</p>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 24px; align-items: start">
-            <div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 18px">
-              <div style="background: #F6F8F6; border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px">
-                <p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5B665F">Как искала решение</p>
-                <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 16px">
-                  <li>Вместе с командой сравнили несколько связок ИИ-агентов и выбрали более экономичную</li>
-                  <li>Разобрали живое демо на учебном отеле и записали каждую проблему интерфейса</li>
-                  <li>Дважды отчёт исполнителя расходился со страницей — ввела правило: публикация только после проверки в превью</li>
-                </ul>
-              </div>
-              <div style="display: flex; flex-direction: column; gap: 0">
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; padding-bottom: 8px"><p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5B665F">Что сделала</p><span></span><p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1F6F4A">К чему привело</p></div>
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; align-items: start; border-top: 1px solid #E6EAE7; padding: 10px 0; font-size: 16px"><p style="margin: 0">Перестроила сайт: лендинг из 15 секций → 11 страниц</p><span style="color: #1F6F4A; font-weight: 700">→</span><p style="margin: 0; color: #175A3B; font-weight: 500">Каждая роль закупочного комитета находит свою страницу: CIO, COO, безопасность, CEO</p></div>
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; align-items: start; border-top: 1px solid #E6EAE7; padding: 10px 0; font-size: 16px"><p style="margin: 0">Убрала 8 демо-метрик без подтверждения</p><span style="color: #1F6F4A; font-weight: 700">→</span><p style="margin: 0; color: #175A3B; font-weight: 500">На сайте только цифры, которые можно проверить</p></div>
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; align-items: start; border-top: 1px solid #E6EAE7; padding: 10px 0; font-size: 16px"><p style="margin: 0">Вела журнал решений с причинами</p><span style="color: #1F6F4A; font-weight: 700">→</span><p style="margin: 0; color: #175A3B; font-weight: 500">46 решений, каждое можно объяснить и пересмотреть</p></div>
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; align-items: start; border-top: 1px solid #E6EAE7; padding: 10px 0; font-size: 16px"><p style="margin: 0">Написала спецификацию интерфейса AURA</p><span style="color: #1F6F4A; font-weight: 700">→</span><p style="margin: 0; color: #175A3B; font-weight: 500">Меню из 40+ пунктов собрано в 8 групп по задачам</p></div>
-              </div>
-            </div>
-            <img src="img/aura-today.jpg" alt="Экран «Сегодня» в дизайн-концепте AURA" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid #E6EAE7">
-          </div>
-          <p style="margin: 0; background: #E1F1E8; color: #175A3B; border-radius: 12px; padding: 14px 18px; font-weight: 600">Результат: пилот подключён к действующему отелю в Грузии</p>
-        </article>
-
-        <!-- ПЛОЩАДЬ ЦВЕТОВ -->
-        <article style="background: #FFFFFF; border: 1px solid #DDE3DE; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 20px">
-          <div style="display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; justify-content: space-between">
-            <h3 style="margin: 0; font-size: 23px; font-weight: 700">Площадь цветов / ООО «ПАВИЛЬОН» · Project Manager</h3>
-            <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #5B665F">06.2025 — 09.2026</p>
-          </div>
-          <p style="margin: 0; color: #3E4742">Цветочный кластер у м. Киевская: 12 павильонов. Павильоны продвигались по отдельности, а участников акций записывали вручную.</p>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 24px; align-items: start">
-            <div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 18px">
-              <div style="background: #F6F8F6; border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px">
-                <p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5B665F">Как искала решение</p>
-                <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 16px">
-                  <li>Посмотрела, где покупатели уже встречают павильоны: в самих павильонах и на Яндекс Картах — туда и поставила вход в акцию</li>
-                  <li>Чтобы не записывать участников вручную, перенесла регистрацию в Telegram-бот</li>
-                  <li>Свела отчёт в одну таблицу, чтобы и команда, и павильоны видели заявки</li>
-                </ul>
-              </div>
-              <div style="display: flex; flex-direction: column; gap: 0">
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; padding-bottom: 8px"><p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5B665F">Что сделала</p><span></span><p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1F6F4A">К чему привело</p></div>
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; align-items: start; border-top: 1px solid #E6EAE7; padding: 10px 0; font-size: 16px"><p style="margin: 0">Сама разработала Telegram-бот с промокодами</p><span style="color: #1F6F4A; font-weight: 700">→</span><p style="margin: 0; color: #175A3B; font-weight: 500">Регистрация и контакты без ручной работы</p></div>
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; align-items: start; border-top: 1px solid #E6EAE7; padding: 10px 0; font-size: 16px"><p style="margin: 0">Плакаты с QR в павильонах и акция на Яндекс Картах</p><span style="color: #1F6F4A; font-weight: 700">→</span><p style="margin: 0; color: #175A3B; font-weight: 500">800 участников сезонных кампаний</p></div>
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; align-items: start; border-top: 1px solid #E6EAE7; padding: 10px 0; font-size: 16px"><p style="margin: 0">Связала бот с заявками павильонам</p><span style="color: #1F6F4A; font-weight: 700">→</span><p style="margin: 0; color: #175A3B; font-weight: 500">200 заявок, конверсия 25%</p></div>
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; align-items: start; border-top: 1px solid #E6EAE7; padding: 10px 0; font-size: 16px"><p style="margin: 0">Вела сайт: требования, подрядчики, приёмка</p><span style="color: #1F6F4A; font-weight: 700">→</span><p style="margin: 0; color: #175A3B; font-weight: 500">Одна витрина для 12 павильонов и вход для арендаторов</p></div>
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; align-items: start; border-top: 1px solid #E6EAE7; padding: 10px 0; font-size: 16px"><p style="margin: 0">Сделала в Figma инвест-КП и листовки А5</p><span style="color: #1F6F4A; font-weight: 700">→</span><p style="margin: 0; color: #175A3B; font-weight: 500">КП на 2 млн ₽ и материалы для павильонов</p></div>
-              </div>
-            </div>
-            <div style="grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; align-items: end">
-              <img src="img/poster.jpg" alt="Плакат с промокодом и QR-кодом" style="width: 100%; height: auto; border-radius: 12px">
-              <img src="img/yandex-promo.jpg" alt="Акция с промокодом на Яндекс Картах" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid #E6EAE7">
-            
-              <img src="img/site-main.jpg" alt="Главная страница сайта Площади цветов" style="grid-column: span 2; width: 100%; height: auto; border-radius: 12px">
-            </div>
-          </div>
-          <p style="margin: 0; background: #E1F1E8; color: #175A3B; border-radius: 12px; padding: 14px 18px; font-weight: 600">Результат: 800 участников сезонных акций → 200 заявок, конверсия 25%</p>
-        </article>
-
-        <!-- DMEBEL -->
-        <article style="background: #FFFFFF; border: 1px solid #DDE3DE; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 20px">
-          <div style="display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; justify-content: space-between">
-            <h3 style="margin: 0; font-size: 23px; font-weight: 700">Dmebel · Project Manager</h3>
-            <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #5B665F">12.2023 — 06.2025</p>
-          </div>
-          <p style="margin: 0; color: #3E4742">Мебель на заказ. Вела проекты от запроса клиента до передачи в производство. Требования приходили в свободной форме, уточнения шли по кругу.</p>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 24px; align-items: start">
-            <div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 18px">
-              <div style="background: #F6F8F6; border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px">
-                <p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5B665F">Как искала решение</p>
-                <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 16px">
-                  <li>Разобрала, из-за чего уточнения шли по кругу: размеры, материалы, сроки и кто что согласовал</li>
-                  <li>Вынесла эти вопросы в обязательные разделы шаблона, а проверки — в чек-лист</li>
-                </ul>
-              </div>
-              <div style="display: flex; flex-direction: column; gap: 0">
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; padding-bottom: 8px"><p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #5B665F">Что сделала</p><span></span><p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1F6F4A">К чему привело</p></div>
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; align-items: start; border-top: 1px solid #E6EAE7; padding: 10px 0; font-size: 16px"><p style="margin: 0">Ввела шаблон ТЗ</p><span style="color: #1F6F4A; font-weight: 700">→</span><p style="margin: 0; color: #175A3B; font-weight: 500">Требования приходят в одном формате</p></div>
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; align-items: start; border-top: 1px solid #E6EAE7; padding: 10px 0; font-size: 16px"><p style="margin: 0">Сделала чек-лист из 5 проверок</p><span style="color: #1F6F4A; font-weight: 700">→</span><p style="margin: 0; color: #175A3B; font-weight: 500">В цех не уходит ТЗ с противоречиями</p></div>
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; align-items: start; border-top: 1px solid #E6EAE7; padding: 10px 0; font-size: 16px"><p style="margin: 0">Свела согласование в одно: клиент, менеджер, производство</p><span style="color: #1F6F4A; font-weight: 700">→</span><p style="margin: 0; color: #175A3B; font-weight: 500">≈ 2 недели → 3 рабочих дня</p></div>
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; align-items: start; border-top: 1px solid #E6EAE7; padding: 10px 0; font-size: 16px"><p style="margin: 0">Настроила работу по воронке в Битрикс24 на 21 стадию</p><span style="color: #1F6F4A; font-weight: 700">→</span><p style="margin: 0; color: #175A3B; font-weight: 500">У каждой сделки следующий шаг с датой</p></div>
-                <div style="display: grid; grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr); gap: 12px; align-items: start; border-top: 1px solid #E6EAE7; padding: 10px 0; font-size: 16px"><p style="margin: 0">Отслеживала встречи, конверсию и отказы</p><span style="color: #1F6F4A; font-weight: 700">→</span><p style="margin: 0; color: #175A3B; font-weight: 500">Видна частая причина отказа — «нет бюджета»</p></div>
-              </div>
-            </div>
-            <img src="img/bitrix.jpg" alt="Карточка сделки в Битрикс24" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid #E6EAE7">
-          </div>
-          <p style="margin: 0; background: #E1F1E8; color: #175A3B; border-radius: 12px; padding: 14px 18px; font-weight: 600">Результат: согласование ТЗ за 3 рабочих дня вместо ≈ 2 недель</p>
-        </article>
-
-        <!-- SALES -->
-        <article style="background: #FFFFFF; border: 1px solid #DDE3DE; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-          <div style="display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; justify-content: space-between">
-            <h3 style="margin: 0; font-size: 23px; font-weight: 700">Продажи, B2B и сообщество</h3>
-            <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #5B665F">2021 — 2025</p>
-          </div>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 12px">
-            <div style="background: #F6F8F6; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 28px; font-weight: 700">17</p><p style="margin: 0; font-size: 15px; color: #3E4742">менеджеров: собрала и обучила отдел, внедрила KPI и контроль воронки</p></div>
-            <div style="background: #F6F8F6; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 28px; font-weight: 700">2,5 млн ₽</p><p style="margin: 0; font-size: 15px; color: #3E4742">госконтракт · Картик.рф: переговоры, КП, участие в закрытии</p></div>
-            <div style="background: #F6F8F6; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-size: 28px; font-weight: 700">50 → 370</p><p style="margin: 0; font-size: 15px; color: #3E4742">участников бизнес-клуба SVOI: процессы и продажи вместе с собственником</p></div>
-          </div>
-          <p style="margin: 0; font-size: 16px; color: #3E4742">Как работаю с клиентами: собираю базу по сайтам и Яндекс Картам, через добавочный выхожу на ЛПР, после звонка присылаю итог разговора и полезные материалы.</p>
-        </article>
-      </section>
-
-      <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 14px">
-        <h2 style="margin: 0; grid-column: 1 / -1; font-size: 28px; font-weight: 700">Почему со мной спокойно</h2>
-        <div style="background: #FFFFFF; border: 1px solid #DDE3DE; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-weight: 700">Довожу до результата</p><p style="margin: 0; font-size: 15px; color: #3E4742">от задачи до цифр, а не до «запустилось»</p></div>
-        <div style="background: #FFFFFF; border: 1px solid #DDE3DE; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-weight: 700">Делаю сама</p><p style="margin: 0; font-size: 15px; color: #3E4742">бот, макеты, КП, воронка в CRM</p></div>
-        <div style="background: #FFFFFF; border: 1px solid #DDE3DE; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 4px"><p style="margin: 0; font-weight: 700">Записываю решения</p><p style="margin: 0; font-size: 15px; color: #3E4742">каждое — с причиной, в журнале</p></div>
-      </section>
-    </main>
+<aside class="profile">
+  <img class="photo" src="img/photo.jpg" alt="Кристина Кондратьева">
+  <div class="namebox">
+    <h1>Кристина Кондратьева</h1>
+    <p class="role">Project / Product Manager. ИИ-продукты и автоматизация</p>
   </div>
+  <p class="status">Ищу работу</p>
+  <div class="facts">
+    <p><b>Москва</b>, удалённо или гибрид</p>
+    <p>Telegram <a href="https://t.me/Krist_chka" target="_blank" rel="noopener">@Krist_chka</a></p>
+    <p>kondr2856@yandex.ru</p>
+    <p>+7 977 267-73-63</p>
+  </div>
+  <a class="cta" href="https://t.me/Krist_chka" target="_blank" rel="noopener">Пригласить на собеседование</a>
+  <div>
+    <p class="small-h">Работаю в</p>
+    <p class="tools">Jira, Trello, Битрикс24, Figma, Google Sheets, Excel, Telegram Bot API, ChatGPT, Claude</p>
+  </div>
+  <div>
+    <p class="small-h">Проекты</p>
+    <div class="links">
+      <a href="https://operiva.tech/" target="_blank" rel="noopener">operiva.tech</a>
+      <a href="https://ploshad-cvetov.ru/" target="_blank" rel="noopener">ploshad-cvetov.ru</a>
+      <a href="https://t.me/FlowersKievskaya_bot" target="_blank" rel="noopener">@FlowersKievskaya_bot</a>
+      <a href="https://denzelmebel.ru/" target="_blank" rel="noopener">denzelmebel.ru</a>
+    </div>
+  </div>
+</aside>
+
+<main>
+  <section class="intro">
+    <p>Превращаю задачу бизнеса в работающий продукт: пишу требования, собираю команду и подрядчиков, проверяю результат и довожу запуск до цифр.</p>
+    <p>Многое делаю своими руками: Telegram-бота, макеты в Figma, коммерческие предложения и воронку в CRM.</p>
+    <div class="numbers">
+      <div><strong>25%</strong><span>конверсия в заявку у моего бота</span></div>
+      <div><strong>3 дня</strong><span>на согласование ТЗ вместо двух недель</span></div>
+      <div><strong>17</strong><span>менеджеров в отделе, который я собрала</span></div>
+      <div><strong>2,5&nbsp;млн&nbsp;₽</strong><span>госконтракт, в закрытии которого участвовала</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Опыт и проекты</h2>
+
+    <article class="case">
+      <div class="case-head">
+        <h3>Operiva, Co-Founder / Product Manager</h3>
+        <p class="when">май 2026 – октябрь 2026</p>
+      </div>
+      <p class="lead">Веб-приложение с ИИ-ассистентами для собственников и управляющих отелей. Оно снимает с администратора рутину: переписку в трёх каналах, устные поручения, ночные запросы.</p>
+      <div>
+        <h4>Как искала решение</h4>
+        <ul>
+          <li>Вместе с командой сравнили несколько связок ИИ-агентов и выбрали более экономичную.</li>
+          <li>Разобрали живое демо на учебном отеле и записали каждую проблему интерфейса.</li>
+          <li>Дважды отчёт исполнителя расходился с тем, что было на странице. После этого ввела правило: публикуем только после проверки в превью.</li>
+        </ul>
+      </div>
+      <div class="done">
+        <h4>Что сделала и к чему это привело</h4>
+        <ul>
+          <li><b>Перестроила сайт operiva.tech:</b> вместо лендинга из 15 секций сделали 11 страниц. <span>Теперь каждый участник закупки, от CIO до службы безопасности, находит свою страницу.</span></li>
+          <li><b>Убрала 8 демо-метрик без подтверждения.</b> <span>На сайте остались только цифры, которые можно проверить.</span></li>
+          <li><b>Вела журнал решений с причинами.</b> <span>В нём 46 решений, любое можно объяснить и пересмотреть.</span></li>
+          <li><b>Написала спецификацию интерфейса AURA.</b> <span>Меню из 40 с лишним пунктов собрали в 8 понятных групп.</span></li>
+        </ul>
+      </div>
+      <img src="img/aura-today.jpg" alt="Экран «Сегодня» в дизайн-концепте AURA" style="border-radius:10px;border:1px solid var(--line)">
+      <p class="note">Дизайн-концепт AURA, данные учебные.</p>
+      <p class="result">Результат: <mark>пилот подключён к действующему отелю в Грузии.</mark></p>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <h3>Площадь цветов (ООО «ПАВИЛЬОН»), Project Manager</h3>
+        <p class="when">июнь 2025 – сентябрь 2026</p>
+      </div>
+      <p class="lead">Цветочный кластер у м. Киевская, 12 павильонов. Павильоны продвигались по отдельности, а участников акций записывали вручную.</p>
+      <div>
+        <h4>Как искала решение</h4>
+        <ul>
+          <li>Посмотрела, где покупатели уже встречают павильоны: в самих павильонах и на Яндекс Картах. Туда и поставила вход в акцию.</li>
+          <li>Чтобы не записывать участников вручную, перенесла регистрацию в Telegram-бота.</li>
+          <li>Свела отчёт в одну таблицу, чтобы заявки видели и команда, и павильоны.</li>
+        </ul>
+      </div>
+      <div class="done">
+        <h4>Что сделала и к чему это привело</h4>
+        <ul>
+          <li><b>Сама разработала Telegram-бота с промокодами.</b> <span>Регистрация и контакты собираются без ручной работы.</span></li>
+          <li><b>Запустила плакаты с QR-кодом и акцию на Яндекс Картах.</b> <span>В сезонных кампаниях участвовали 800 человек.</span></li>
+          <li><b>Связала бота с заявками павильонам.</b> <span>Пришло 200 заявок, это 25% от участников.</span></li>
+          <li><b>Вела сайт ploshad-cvetov.ru:</b> требования, подрядчики, приёмка. <span>У 12 павильонов появилась общая витрина и отдельный вход для арендаторов.</span></li>
+          <li><b>Сделала в Figma инвест-КП на 2 млн ₽ и листовки А5.</b></li>
+        </ul>
+      </div>
+      <div class="shots three">
+        <img src="img/poster.jpg" alt="Плакат с промокодом и QR-кодом">
+        <img src="img/yandex-promo.jpg" alt="Акция с промокодом на Яндекс Картах">
+        <img src="img/site-main.jpg" alt="Главная страница сайта Площади цветов">
+      </div>
+      <p class="result">Результат: <mark>из 800 участников акций 200 оставили заявку, конверсия 25%.</mark></p>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <h3>Dmebel, Project Manager</h3>
+        <p class="when">декабрь 2023 – июнь 2025</p>
+      </div>
+      <p class="lead">Мебель на заказ. Вела проекты от запроса клиента до передачи в производство. Требования приходили в свободной форме, и уточнения шли по кругу.</p>
+      <div>
+        <h4>Как искала решение</h4>
+        <ul>
+          <li>Разобрала, из-за чего уточнения повторялись: размеры, материалы, сроки и кто что согласовал.</li>
+          <li>Сделала эти вопросы обязательными разделами шаблона, а проверки вынесла в чек-лист.</li>
+        </ul>
+      </div>
+      <div class="done">
+        <h4>Что сделала и к чему это привело</h4>
+        <ul>
+          <li><b>Ввела шаблон ТЗ.</b> <span>Требования приходят в одном формате.</span></li>
+          <li><b>Сделала чек-лист из 5 проверок.</b> <span>В цех не уходит ТЗ с противоречиями.</span></li>
+          <li><b>Свела согласование в одно:</b> клиент, менеджер и производство. <span>Вместо двух недель уходит 3 рабочих дня.</span></li>
+          <li><b>Настроила работу по воронке в Битрикс24 на 21 стадию.</b> <span>У каждой сделки есть следующий шаг с датой.</span></li>
+          <li><b>Отслеживала встречи, конверсию и отказы.</b> <span>Стало видно частую причину отказа: «нет бюджета».</span></li>
+        </ul>
+      </div>
+      <img src="img/bitrix.jpg" alt="Карточка сделки в Битрикс24" style="border-radius:10px;border:1px solid var(--line)">
+      <p class="result">Результат: <mark>согласование ТЗ за 3 рабочих дня вместо двух недель.</mark></p>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <h3>Продажи, B2B и сообщество</h3>
+        <p class="when">2021 – 2025</p>
+      </div>
+      <div class="sales">
+        <p>Собрала и обучила отдел из <b>17 менеджеров</b>, внедрила KPI и контроль воронки. Вела B2B и госзаказчиков, участвовала в закрытии госконтракта Картик.рф на <b>2,5 млн ₽</b>. Вместе с собственником вырастила бизнес-клуб SVOI с <b>50 до 370 участников</b>.</p>
+        <p>С клиентами работаю так: собираю базу по сайтам и Яндекс Картам, через добавочный выхожу на того, кто принимает решение, а после звонка присылаю короткий итог разговора и полезные материалы.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="closing">
+    <h2>Обсудим, какую задачу я возьму у вас</h2>
+    <p>Быстрее всего написать в Telegram <a href="https://t.me/Krist_chka" target="_blank" rel="noopener">@Krist_chka</a>. Почта kondr2856@yandex.ru, телефон +7 977 267-73-63.</p>
+  </section>
+</main>
 </div>
 </body>
 </html>
