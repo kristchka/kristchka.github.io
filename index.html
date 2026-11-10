@@ -45,8 +45,6 @@ b,strong{font-weight:600}
 
 /* основная колонка */
 main{display:grid;gap:64px;min-width:0}
-.intro p{font-size:24px;font-weight:500;line-height:1.4;letter-spacing:-.01em;max-width:28em;text-wrap:balance}
-.intro p+p{margin-top:14px;font-size:18px;font-weight:400;line-height:1.55;letter-spacing:0;color:var(--soft);max-width:34em;text-wrap:pretty}
 .numbers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:32px}
 .numbers div{padding:20px 20px 20px 0}
 .numbers div+div{padding-left:20px;border-left:1px solid var(--line)}
@@ -82,6 +80,15 @@ main{display:grid;gap:64px;min-width:0}
 .closing p{color:var(--soft);max-width:36em}
 
 
+.hello{font-size:28px;font-weight:700;line-height:1.2;letter-spacing:-.015em;max-width:22em;text-wrap:balance}
+.can{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+.can div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 16px 18px;display:flex;flex-direction:column;gap:6px}
+.can b{font-size:16px;color:var(--accent)}
+.can span{font-size:14px;line-height:1.45;color:var(--soft)}
+.self{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:18px;font-size:14px}
+.self span{color:var(--soft);margin-right:2px}
+.self i{font-style:normal;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 12px}
+@media (max-width:900px){.can{grid-template-columns:repeat(2,minmax(0,1fr))}.hello{font-size:23px}}
 /* карточки кейсов */
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .stats div{border:1px solid var(--line);border-radius:14px;padding:20px 22px;display:flex;flex-direction:column;gap:4px}
@@ -127,8 +134,7 @@ main{display:grid;gap:64px;min-width:0}
   .numbers{grid-template-columns:repeat(2,minmax(0,1fr))}
   .numbers div:nth-child(3){padding-left:0;border-left:0}
   .numbers div:nth-child(n+3){border-top:1px solid var(--line)}
-  .intro p{font-size:19px}
-  .shots.three{grid-template-columns:1fr 1fr}
+    .shots.three{grid-template-columns:1fr 1fr}
   .shots.three img:last-child{grid-column:1/-1}
 }
 @media (max-width:480px){
@@ -171,8 +177,14 @@ main{display:grid;gap:64px;min-width:0}
 
 <main>
   <section class="intro">
-    <p>Превращаю задачу бизнеса в&nbsp;работающий продукт: пишу требования, собираю команду и&nbsp;подрядчиков, проверяю результат и&nbsp;довожу запуск до&nbsp;цифр.</p>
-    <p>Многое делаю своими руками: Telegram-бота, макеты в&nbsp;Figma, коммерческие предложения и&nbsp;воронку в&nbsp;CRM.</p>
+    <h2 class="hello">Беру задачу бизнеса и&nbsp;довожу её до&nbsp;работающего продукта</h2>
+    <div class="can">
+      <div><b>Требования</b><span>ТЗ, понятное команде и&nbsp;подрядчикам</span></div>
+      <div><b>Команда</b><span>Ставлю задачи и&nbsp;держу сроки</span></div>
+      <div><b>Приёмка</b><span>Сверяю результат с&nbsp;заявленным</span></div>
+      <div><b>Запуск</b><span>Довожу до людей и&nbsp;до&nbsp;цифр</span></div>
+    </div>
+    <p class="self"><span>Делаю сама:</span><i>Telegram-бот</i><i>макеты в&nbsp;Figma</i><i>коммерческие предложения</i><i>воронка в&nbsp;CRM</i></p>
     <div class="numbers">
       <div><strong>25%</strong><span>конверсия в заявку у&nbsp;моего бота</span></div>
       <div><strong>3 дня</strong><span>на ТЗ вместо двух&nbsp;недель</span></div>
