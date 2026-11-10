@@ -82,6 +82,13 @@ main{display:grid;gap:64px;min-width:0}
 
 
 /* карточки кейсов */
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.stats div{border:1px solid var(--line);border-radius:14px;padding:20px 22px;display:flex;flex-direction:column;gap:4px}
+.stats strong{font-size:36px;line-height:1.05;font-weight:700;color:var(--accent);letter-spacing:-.02em;white-space:nowrap}
+.stats b{font-size:16px;margin-top:4px}
+.stats span{font-size:14.5px;line-height:1.45;color:var(--soft);margin-top:4px}
+@media (max-width:900px){.stats{grid-template-columns:minmax(0,1fr)}}
+
 .cases{display:grid;gap:28px}
 .case{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:32px;display:grid;gap:26px;border-top:1px solid var(--line)!important;padding-top:32px!important}
 .case-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 32px;align-items:start}
@@ -263,9 +270,12 @@ main{display:grid;gap:64px;min-width:0}
     <article class="case">
       <div class="case-top">
         <h3>Продажи, B2B и сообщество</h3>
-        <div class="metric"><strong>17</strong><span>менеджеров в отделе, который я собрала и обучила</span></div>
         <p class="when">2021 – 2025</p>
-        <p class="lead">Внедрила KPI и контроль воронки. Вела B2B и госзаказчиков, участвовала в закрытии госконтракта Картик.рф на <b>2,5&nbsp;млн&nbsp;₽</b>. Вместе с собственником вырастила бизнес-клуб SVOI с <b>50 до 370 участников</b>.</p>
+      </div>
+      <div class="stats">
+        <div><strong>17</strong><b>менеджеров</b><span>Собрала и обучила отдел, внедрила KPI и&nbsp;контроль воронки</span></div>
+        <div><strong>2,5&nbsp;млн&nbsp;₽</strong><b>госконтракт</b><span>Картик.рф: переговоры, КП и&nbsp;участие в&nbsp;закрытии</span></div>
+        <div><strong>50&nbsp;→&nbsp;370</strong><b>участников клуба</b><span>Бизнес-клуб SVOI: выстроила процессы и&nbsp;продажи</span></div>
       </div>
       <div class="search">
         <h4>Как работаю с клиентами</h4>
