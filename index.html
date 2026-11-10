@@ -80,6 +80,36 @@ main{display:grid;gap:64px;min-width:0}
 .closing h2{font-size:26px;font-weight:700}
 .closing p{color:var(--soft);max-width:36em}
 
+
+/* карточки кейсов */
+.cases{display:grid;gap:28px}
+.case{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:32px;display:grid;gap:26px;border-top:1px solid var(--line)!important;padding-top:32px!important}
+.case-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 32px;align-items:start}
+.case-top h3{font-size:24px;font-weight:700;letter-spacing:-.01em;line-height:1.2}
+.case-top .when{margin-top:4px}
+.case-top .lead{grid-column:1;margin-top:10px}
+.metric{grid-column:2;grid-row:1 / span 3;text-align:right;min-width:170px}
+.metric strong{display:block;font-size:44px;line-height:1;font-weight:700;color:var(--accent);letter-spacing:-.02em;white-space:nowrap}
+.metric span{display:block;font-size:14px;color:var(--soft);margin-top:8px;max-width:230px;margin-left:auto}
+.case-body{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:28px;align-items:start}
+.search{background:var(--accent-bg);border-radius:14px;padding:22px 24px}
+.search h4,.did h4{font-size:17px;font-weight:600;margin-bottom:14px}
+.search ol{margin:0;padding:0;list-style:none;display:grid;gap:14px;counter-reset:s}
+.search li{position:relative;padding-left:36px;font-size:15.5px;line-height:1.5;counter-increment:s}
+.search li::before{content:counter(s);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.did .item{padding:12px 0;border-top:1px solid var(--line);display:grid;gap:3px}
+.did .item:first-of-type{border-top:0;padding-top:0}
+.did .item b{font-size:16px}
+.did .item span{font-size:15px;color:var(--accent);padding-left:22px;position:relative}
+.did .item span::before{content:"";position:absolute;left:2px;top:7px;width:11px;height:6px;border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg)}
+@media (max-width:900px){
+  .case{padding:22px}
+  .case-top{grid-template-columns:minmax(0,1fr)}
+  .metric{grid-column:1;grid-row:auto;text-align:left}
+  .metric span{margin-left:0}
+  .case-body{grid-template-columns:minmax(0,1fr)}
+}
+
 @media (max-width:900px){
   .page{grid-template-columns:minmax(0,1fr);gap:40px;padding:28px 16px 56px}
   .profile{position:static;grid-template-columns:140px minmax(0,1fr);align-items:start}
@@ -146,103 +176,107 @@ main{display:grid;gap:64px;min-width:0}
   <section>
     <h2 class="section-title">Опыт и проекты</h2>
 
+    <div class="cases">
     <article class="case">
-      <div class="case-head">
+      <div class="case-top">
         <h3>Operiva, Co-Founder / Product Manager</h3>
+        <div class="metric"><strong>Пилот</strong><span>подключён к действующему отелю в Грузии</span></div>
         <p class="when">май 2026 – октябрь 2026</p>
+        <p class="lead">Веб-приложение с ИИ-ассистентами для собственников и управляющих отелей. Снимает с администратора рутину: переписку в трёх каналах, устные поручения, ночные запросы.</p>
       </div>
-      <p class="lead">Веб-приложение с ИИ-ассистентами для собственников и управляющих отелей. Оно снимает с администратора рутину: переписку в трёх каналах, устные поручения, ночные запросы.</p>
-      <div>
-        <h4>Как искала решение</h4>
-        <ul>
-          <li>Вместе с командой сравнили несколько связок ИИ-агентов и выбрали более экономичную.</li>
-          <li>Разобрали живое демо на учебном отеле и записали каждую проблему интерфейса.</li>
-          <li>Дважды отчёт исполнителя расходился с тем, что было на странице. После этого ввела правило: публикуем только после проверки в превью.</li>
-        </ul>
+      <div class="case-body">
+        <div class="search">
+          <h4>Как искала решение</h4>
+          <ol>
+            <li>Вместе с командой сравнили несколько связок ИИ-агентов и выбрали более экономичную.</li>
+            <li>Разобрали живое демо на учебном отеле и записали каждую проблему интерфейса.</li>
+            <li>Отчёт исполнителя дважды расходился со страницей. Ввела правило: публикуем только после проверки в превью.</li>
+          </ol>
+        </div>
+        <div class="did">
+          <h4>Что сделала и что это дало</h4>
+          <div class="item"><b>Перестроила сайт operiva.tech: 11 страниц вместо лендинга из 15 секций</b><span>Каждый участник закупки, от CIO до безопасности, находит свою страницу</span></div>
+          <div class="item"><b>Убрала 8 демо-метрик без подтверждения</b><span>На сайте только цифры, которые можно проверить</span></div>
+          <div class="item"><b>Вела журнал решений с причинами</b><span>46 решений, любое можно объяснить и пересмотреть</span></div>
+          <div class="item"><b>Написала спецификацию интерфейса AURA</b><span>Меню из 40 с лишним пунктов собрано в 8 групп</span></div>
+        </div>
       </div>
-      <div class="done">
-        <h4>Что сделала и к чему это привело</h4>
-        <ul>
-          <li><b>Перестроила сайт operiva.tech:</b> вместо лендинга из 15 секций сделали 11 страниц. <span>Теперь каждый участник закупки, от CIO до службы безопасности, находит свою страницу.</span></li>
-          <li><b>Убрала 8 демо-метрик без подтверждения.</b> <span>На сайте остались только цифры, которые можно проверить.</span></li>
-          <li><b>Вела журнал решений с причинами.</b> <span>В нём 46 решений, любое можно объяснить и пересмотреть.</span></li>
-          <li><b>Написала спецификацию интерфейса AURA.</b> <span>Меню из 40 с лишним пунктов собрали в 8 понятных групп.</span></li>
-        </ul>
-      </div>
-      <img src="img/aura-today.jpg" alt="Экран «Сегодня» в дизайн-концепте AURA" style="border-radius:10px;border:1px solid var(--line)">
-      <p class="note">Дизайн-концепт AURA, данные учебные.</p>
-      <p class="result">Результат: <mark>пилот подключён к действующему отелю в Грузии.</mark></p>
+      <figure style="margin:0;display:grid;gap:8px"><img src="img/aura-today.jpg" alt="Экран «Сегодня» в дизайн-концепте AURA" style="border-radius:10px;border:1px solid var(--line)"><figcaption class="note">Дизайн-концепт AURA, данные учебные.</figcaption></figure>
     </article>
-
     <article class="case">
-      <div class="case-head">
+      <div class="case-top">
         <h3>Площадь цветов (ООО «ПАВИЛЬОН»), Project Manager</h3>
+        <div class="metric"><strong>25%</strong><span>конверсия в заявку: 200 заявок из 800 участников</span></div>
         <p class="when">июнь 2025 – сентябрь 2026</p>
+        <p class="lead">Цветочный кластер у м. Киевская, 12 павильонов. Павильоны продвигались по отдельности, участников акций записывали вручную.</p>
       </div>
-      <p class="lead">Цветочный кластер у м. Киевская, 12 павильонов. Павильоны продвигались по отдельности, а участников акций записывали вручную.</p>
-      <div>
-        <h4>Как искала решение</h4>
-        <ul>
-          <li>Посмотрела, где покупатели уже встречают павильоны: в самих павильонах и на Яндекс Картах. Туда и поставила вход в акцию.</li>
-          <li>Чтобы не записывать участников вручную, перенесла регистрацию в Telegram-бота.</li>
-          <li>Свела отчёт в одну таблицу, чтобы заявки видели и команда, и павильоны.</li>
-        </ul>
-      </div>
-      <div class="done">
-        <h4>Что сделала и к чему это привело</h4>
-        <ul>
-          <li><b>Сама разработала Telegram-бота с промокодами.</b> <span>Регистрация и контакты собираются без ручной работы.</span></li>
-          <li><b>Запустила плакаты с QR-кодом и акцию на Яндекс Картах.</b> <span>В сезонных кампаниях участвовали 800 человек.</span></li>
-          <li><b>Связала бота с заявками павильонам.</b> <span>Пришло 200 заявок, это 25% от участников.</span></li>
-          <li><b>Вела сайт ploshad-cvetov.ru:</b> требования, подрядчики, приёмка. <span>У 12 павильонов появилась общая витрина и отдельный вход для арендаторов.</span></li>
-          <li><b>Сделала в Figma инвест-КП на 2 млн ₽ и листовки А5.</b></li>
-        </ul>
+      <div class="case-body">
+        <div class="search">
+          <h4>Как искала решение</h4>
+          <ol>
+            <li>Посмотрела, где покупатели уже встречают павильоны: в самих павильонах и на Яндекс Картах. Туда и поставила вход в акцию.</li>
+            <li>Чтобы не записывать участников вручную, перенесла регистрацию в Telegram-бота.</li>
+            <li>Свела отчёт в одну таблицу, чтобы заявки видели и команда, и павильоны.</li>
+          </ol>
+        </div>
+        <div class="did">
+          <h4>Что сделала и что это дало</h4>
+          <div class="item"><b>Сама разработала Telegram-бота с промокодами</b><span>Регистрация и контакты без ручной работы</span></div>
+          <div class="item"><b>Запустила плакаты с QR-кодом и акцию на Яндекс Картах</b><span>800 участников сезонных кампаний</span></div>
+          <div class="item"><b>Связала бота с заявками павильонам</b><span>200 заявок, конверсия 25%</span></div>
+          <div class="item"><b>Вела сайт ploshad-cvetov.ru: требования, подрядчики, приёмка</b><span>Общая витрина для 12 павильонов и вход для арендаторов</span></div>
+          <div class="item"><b>Сделала в Figma инвест-КП и листовки А5</b><span>КП на 2 млн ₽ и материалы для павильонов</span></div>
+        </div>
       </div>
       <div class="shots three">
         <img src="img/poster.jpg" alt="Плакат с промокодом и QR-кодом">
         <img src="img/yandex-promo.jpg" alt="Акция с промокодом на Яндекс Картах">
         <img src="img/site-main.jpg" alt="Главная страница сайта Площади цветов">
       </div>
-      <p class="result">Результат: <mark>из 800 участников акций 200 оставили заявку, конверсия 25%.</mark></p>
     </article>
-
     <article class="case">
-      <div class="case-head">
+      <div class="case-top">
         <h3>Dmebel, Project Manager</h3>
+        <div class="metric"><strong>3 дня</strong><span>на согласование ТЗ вместо двух недель</span></div>
         <p class="when">декабрь 2023 – июнь 2025</p>
+        <p class="lead">Мебель на заказ. Вела проекты от запроса клиента до передачи в производство. Требования приходили в свободной форме, уточнения шли по кругу.</p>
       </div>
-      <p class="lead">Мебель на заказ. Вела проекты от запроса клиента до передачи в производство. Требования приходили в свободной форме, и уточнения шли по кругу.</p>
-      <div>
-        <h4>Как искала решение</h4>
-        <ul>
-          <li>Разобрала, из-за чего уточнения повторялись: размеры, материалы, сроки и кто что согласовал.</li>
-          <li>Сделала эти вопросы обязательными разделами шаблона, а проверки вынесла в чек-лист.</li>
-        </ul>
-      </div>
-      <div class="done">
-        <h4>Что сделала и к чему это привело</h4>
-        <ul>
-          <li><b>Ввела шаблон ТЗ.</b> <span>Требования приходят в одном формате.</span></li>
-          <li><b>Сделала чек-лист из 5 проверок.</b> <span>В цех не уходит ТЗ с противоречиями.</span></li>
-          <li><b>Свела согласование в одно:</b> клиент, менеджер и производство. <span>Вместо двух недель уходит 3 рабочих дня.</span></li>
-          <li><b>Настроила работу по воронке в Битрикс24 на 21 стадию.</b> <span>У каждой сделки есть следующий шаг с датой.</span></li>
-          <li><b>Отслеживала встречи, конверсию и отказы.</b> <span>Стало видно частую причину отказа: «нет бюджета».</span></li>
-        </ul>
+      <div class="case-body">
+        <div class="search">
+          <h4>Как искала решение</h4>
+          <ol>
+            <li>Разобрала, из-за чего уточнения повторялись: размеры, материалы, сроки и кто что согласовал.</li>
+            <li>Сделала эти вопросы обязательными разделами шаблона, а проверки вынесла в чек-лист.</li>
+          </ol>
+        </div>
+        <div class="did">
+          <h4>Что сделала и что это дало</h4>
+          <div class="item"><b>Ввела шаблон ТЗ</b><span>Требования приходят в одном формате</span></div>
+          <div class="item"><b>Сделала чек-лист из 5 проверок</b><span>В цех не уходит ТЗ с противоречиями</span></div>
+          <div class="item"><b>Свела согласование в одно: клиент, менеджер, производство</b><span>3 рабочих дня вместо двух недель</span></div>
+          <div class="item"><b>Настроила работу по воронке в Битрикс24 на 21 стадию</b><span>У каждой сделки следующий шаг с датой</span></div>
+          <div class="item"><b>Отслеживала встречи, конверсию и отказы</b><span>Видна частая причина отказа: «нет бюджета»</span></div>
+        </div>
       </div>
       <img src="img/bitrix.jpg" alt="Карточка сделки в Битрикс24" style="border-radius:10px;border:1px solid var(--line)">
-      <p class="result">Результат: <mark>согласование ТЗ за 3 рабочих дня вместо двух недель.</mark></p>
     </article>
-
     <article class="case">
-      <div class="case-head">
+      <div class="case-top">
         <h3>Продажи, B2B и сообщество</h3>
+        <div class="metric"><strong>17</strong><span>менеджеров в отделе, который я собрала и обучила</span></div>
         <p class="when">2021 – 2025</p>
+        <p class="lead">Внедрила KPI и контроль воронки. Вела B2B и госзаказчиков, участвовала в закрытии госконтракта Картик.рф на <b>2,5&nbsp;млн&nbsp;₽</b>. Вместе с собственником вырастила бизнес-клуб SVOI с <b>50 до 370 участников</b>.</p>
       </div>
-      <div class="sales">
-        <p>Собрала и обучила отдел из <b>17 менеджеров</b>, внедрила KPI и контроль воронки. Вела B2B и госзаказчиков, участвовала в закрытии госконтракта Картик.рф на <b>2,5 млн ₽</b>. Вместе с собственником вырастила бизнес-клуб SVOI с <b>50 до 370 участников</b>.</p>
-        <p>С клиентами работаю так: собираю базу по сайтам и Яндекс Картам, через добавочный выхожу на того, кто принимает решение, а после звонка присылаю короткий итог разговора и полезные материалы.</p>
+      <div class="search">
+        <h4>Как работаю с клиентами</h4>
+        <ol>
+          <li>Собираю базу по сайтам компаний и Яндекс Картам.</li>
+          <li>Через добавочный выхожу на того, кто принимает решение.</li>
+          <li>После звонка присылаю короткий итог разговора и полезные материалы.</li>
+        </ol>
       </div>
     </article>
+    </div>
   </section>
 
   <section class="closing">
