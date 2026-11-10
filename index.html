@@ -75,9 +75,8 @@ main{display:grid;gap:64px;min-width:0}
 .sales{display:grid;gap:14px}
 .sales p{max-width:42em}
 
-.closing{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:32px;display:grid;gap:12px}
-.closing h2{font-size:26px;font-weight:700}
-.closing p{color:var(--soft);max-width:36em}
+.closing{background:var(--accent);color:#fff;border-radius:18px;padding:36px;display:grid;gap:22px}
+.closing h2{font-size:28px;font-weight:700;line-height:1.2;letter-spacing:-.01em;max-width:16em;text-wrap:balance}
 
 
 .hello{font-size:28px;font-weight:700;line-height:1.2;letter-spacing:-.015em;max-width:22em;text-wrap:balance}
@@ -89,6 +88,12 @@ main{display:grid;gap:64px;min-width:0}
 .self span{color:var(--soft);margin-right:2px}
 .self i{font-style:normal;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 12px}
 @media (max-width:900px){.can{grid-template-columns:repeat(2,minmax(0,1fr))}.hello{font-size:23px}}
+.closing .tg{justify-self:start;background:#fff;color:var(--accent);text-decoration:none;font-weight:600;padding:13px 22px;border-radius:10px}
+.closing .contacts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;border-top:1px solid rgba(255,255,255,.25);padding-top:20px}
+.closing .contacts div{display:grid;gap:2px;min-width:0}
+.closing .contacts span{font-size:13px;opacity:.75}
+.closing .contacts a,.closing .contacts b{color:#fff;font-weight:600;font-size:16px;overflow-wrap:anywhere}
+@media (max-width:900px){.closing{padding:24px 20px}.closing h2{font-size:23px}.closing .tg{justify-self:stretch;text-align:center}.closing .contacts{grid-template-columns:minmax(0,1fr)}}
 /* карточки кейсов */
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .stats div{border:1px solid var(--line);border-radius:14px;padding:20px 22px;display:flex;flex-direction:column;gap:4px}
@@ -153,6 +158,22 @@ main{display:grid;gap:64px;min-width:0}
   .case h3,.case-top h3{font-size:21px}
   .case-body{gap:22px}
 }
+
+@media (max-width:900px){
+  .intro{display:flex;flex-direction:column}
+  .intro .hello{order:1}
+  .intro .numbers{order:2;margin-top:18px}
+  .intro .can{order:3}
+  .intro .self{order:4}
+  .self{gap:6px;font-size:13px}
+  .self span{flex-basis:100%;margin-bottom:2px}
+  .self i{padding:4px 10px}
+  .case-top{display:flex;flex-direction:column;gap:6px}
+  .case-top h3{order:1}
+  .case-top .when{order:2;margin-top:0}
+  .case-top .metric{order:3;margin-top:10px}
+  .case-top .lead{order:4;margin-top:8px}
+}
 </style>
 </head>
 <body>
@@ -191,7 +212,7 @@ main{display:grid;gap:64px;min-width:0}
   <section class="intro">
     <h2 class="hello">Беру задачу бизнеса и&nbsp;довожу её до&nbsp;работающего продукта</h2>
     <div class="can">
-      <div><b>Требования</b><span>ТЗ, понятное команде и&nbsp;подрядчикам</span></div>
+      <div><b>Требования</b><span>ТЗ для команды и&nbsp;подрядчиков</span></div>
       <div><b>Команда</b><span>Ставлю задачи и&nbsp;держу сроки</span></div>
       <div><b>Приёмка</b><span>Сверяю результат с&nbsp;заявленным</span></div>
       <div><b>Запуск</b><span>Довожу до людей и&nbsp;до&nbsp;цифр</span></div>
@@ -307,8 +328,13 @@ main{display:grid;gap:64px;min-width:0}
   </section>
 
   <section class="closing">
-    <h2>Обсудим, какую задачу я возьму у вас</h2>
-    <p>Быстрее всего написать в Telegram <a href="https://t.me/Krist_chka" target="_blank" rel="noopener">@Krist_chka</a>. Почта kondr2856@yandex.ru, телефон +7&nbsp;977&nbsp;267-73-63.</p>
+    <h2>Обсудим, какую задачу я&nbsp;возьму у&nbsp;вас</h2>
+    <a class="tg" href="https://t.me/Krist_chka" target="_blank" rel="noopener">Написать в Telegram</a>
+    <div class="contacts">
+      <div><span>Telegram</span><a href="https://t.me/Krist_chka" target="_blank" rel="noopener">@Krist_chka</a></div>
+      <div><span>Почта</span><b>kondr2856@yandex.ru</b></div>
+      <div><span>Телефон</span><b>+7&nbsp;977&nbsp;267-73-63</b></div>
+    </div>
   </section>
 </main>
 </div>
