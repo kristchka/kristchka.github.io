@@ -141,6 +141,18 @@ main{display:grid;gap:64px;min-width:0}
   .profile{grid-template-columns:110px minmax(0,1fr)}
   .facts{font-size:14px}
 }
+
+@media (max-width:900px){
+  .did{display:grid;gap:8px}
+  .did h4{margin-bottom:2px}
+  .did .item,.did .item:first-of-type{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .did .item b{font-size:15px;line-height:1.35}
+  .did .item span{font-size:14px;margin-top:4px;font-weight:500}
+  .search{padding:18px}
+  .search li{font-size:14.5px}
+  .case h3,.case-top h3{font-size:21px}
+  .case-body{gap:22px}
+}
 </style>
 </head>
 <body>
